@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="calculator.css" type="text/css">
+
+		<script>
+				function calculator(v)
+				{
+					document.getElementById('ruh').value+=v;
+						
+				}
+
+				function result()
+				{
+					 
+					 var x = document.getElementById("ruh").value;
+					 var y=eval(x);
+					 document.getElementById("ruh").value=y;
+				}
+
+				function cl_screen()
+				{
+					document.getElementById("ruh").value =" ";
+				}
+
+		</script>
+			
+		<style>
+
+				*{
+	
+					margin:0px;
+				}
+
+				.container{
+					margin:120px;
+					}
+
+			.cl_1 input{
+				width:330px;
+				height:52px;
+				border:2px solid black;
+				text-align:right;
+				font-size:18px;
+				}
+
+			.cl_2{
+				padding:5px;
+				}
+
+			.cl_2 input{
+				width:78px;
+				height:41px;
+				border:2px solid white;
+				background-color:black;
+				color:white;
+	
+				}
+
+			.cl_2 input:hover{
+				background-color:gray;
+				color:white;
+				border:2px solid black;
+				}
+
+			#clr{
+				background-color:red;
+				color:black;
+				border:2px solid white;
+				}
+
+			#clr:hover{
+				background-color:black;
+				color:white;
+				border:2px solid white;
+				}
+
+			#eq{
+				background-color:red;
+				color:white;
+				border:2px solid white;
+				}
+
+			#eq:hover{
+				background-color:black;
+				color:white;
+				border:2px solid white;
+				}
+		</style>
+</head>
+<body>
+<div class="container">
+	<h1>CALCULATOR</h1>
+	
+	<div class="cl_1">
+		<input type="text" name="display" id="ruh" />
+	</div>
+	<div class="cl_2">
+		
+			<input  type="button" value="7" onclick="calculator('7')" />
+			<input  type="button" value="8" onclick="calculator('8')" />
+			<input  type="button" value="9" onclick="calculator('9')" />
+			<input id="clr" type="button" value="CLR" onclick="cl_screen()"/>
+
+				</br>
+			<input  type="button" value="6" onclick="calculator('6')" />
+			<input  type="button" value="5" onclick="calculator('5')"/>
+			<input  type="button" value="4" onclick="calculator('4')"/>
+			<input  type="button" value="+" onclick="calculator('+')"/>
+
+				</br>
+			<input  type="button" value="3" onclick="calculator('3')"/>
+			<input  type="button" value="2" onclick="calculator('2')" />
+			<input  type="button" value="1" onclick="calculator('1')"/>
+			<input  type="button" value="-" onclick="calculator('-')"/>
+				</br>
+		
+			<input type="button" value="." onclick="calculator('.')" />
+			<input  type="button" value="0" onclick="calculator('0')" />
+			<input  type="button" value="=" id="eq" onclick="result()"/>
+			<input  type="button" value="(" onclick="calculator('(')" />
+			
+				</br>
+			
+			<input  type="button" value="*" onclick="calculator('*')"/>
+			<input  type="button" value="/" onclick="calculator('/')" />	
+			<input  type="button" value="%" onclick="calculator('%')" />
+			<input  type="button" value=")" onclick="calculator(')')" />		
+
+
+	</div>
+</div>
+
+</body>
+</html>
